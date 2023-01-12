@@ -6,7 +6,6 @@ from bs4 import BeautifulSoup
 url = "https://www.reddit.com/r/gameofthrones/"
 response = req.get(url)
 soup = BeautifulSoup(response.text, "html.parser")
-soup = BeautifulSoup(response.text, "html.parser")
 
 headers_list = list()
 headers = soup.findAll("h3", attrs = {"class":"_eYtD2XCVieq6emjKBH3m"})
