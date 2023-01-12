@@ -36,12 +36,6 @@ for link in links:
     links_list.append(link.get("href"))
 #print(links_list)
 
-
-df = pd.DataFrame(zip(new_headers, 
-                      votes_list, 
-                      dates_list, 
-                      links_list), 
-                      columns = ["Headers", "Votes", "Dates", "Links"])
 df = pd.DataFrame(zip(new_headers, votes_list, dates_list, links_list), columns = ["Headers", "Votes", "Dates", "Links"])
 csv_file = df.to_csv("gameofthrones.csv")
 reading = pd.read_csv("gameofthrones.csv")
